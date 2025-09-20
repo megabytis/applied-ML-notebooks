@@ -1,6 +1,8 @@
 # 🧠 Machine Learning Algorithms Cheatsheet
 
-## ✅ Supervised & Unsupervised Learning — All Major Algorithms
+## ✅ Supervised, Unsupervised & Reinforcement Learning
+
+— All Major Algorithms to solve any type of problems
 
 ---
 
@@ -10,39 +12,35 @@ _(Used when you have labeled data — input + known output)_
 
 ---
 
-### 1️⃣ Regression Algorithms
+### 🔢 REGRESSION ALGORITHMS → Predict Continuous Values
 
-→ Predict **continuous numerical values**
-
-| Algorithm                                                     | Use Case Example                        | Key Features                                             |
-| ------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------- |
-| **Linear Regression**                                         | House price, salary prediction          | Simple, interpretable, assumes linear relationship       |
-| **Polynomial Regression**                                     | Non-linear trends (e.g., growth curves) | Fits curved relationships using polynomial terms         |
-| **Ridge Regression**                                          | When multicollinearity exists           | Adds L2 regularization to prevent overfitting            |
-| **Lasso Regression**                                          | Feature selection + regression          | Adds L1 regularization — can shrink coefficients to zero |
-| **Elastic Net**                                               | Mix of Ridge + Lasso                    | Good when you have many correlated features              |
-| **Support Vector Regression (SVR)**                           | Non-linear regression with margins      | Uses kernels, robust to outliers                         |
-| **Decision Tree Regressor**                                   | Predict sales, temperature              | Easy to visualize, handles non-linearity                 |
-| **Random Forest Regressor**                                   | Ensemble of trees — high accuracy       | Reduces overfitting, handles noise well                  |
-| **Gradient Boosting Regressor (XGBoost, LightGBM, CatBoost)** | Winning solution in Kaggle              | Sequential boosting — high performance                   |
+| Algorithm                   | Use Case Example                  | Key Features                                                            |
+| --------------------------- | --------------------------------- | ----------------------------------------------------------------------- |
+| Linear Regression           | House price, salary prediction    | Simple, interpretable, assumes linear relationship                      |
+| Polynomial Regression       | Non-linear trends (growth curves) | Fits curved relationships using polynomial terms                        |
+| Ridge Regression            | Multicollinearity in features     | Adds L2 regularization to reduce overfitting                            |
+| Lasso Regression            | Feature selection + regression    | Adds L1 regularization — zeros out weak features                        |
+| Elastic Net                 | Mix of Ridge + Lasso              | Best for datasets with many correlated features                         |
+| Support Vector Regression   | Non-linear regression             | Uses kernels, robust to outliers                                        |
+| Decision Tree Regressor     | Sales, temperature prediction     | Easy to visualize, handles non-linearity                                |
+| Random Forest Regressor     | High-accuracy ensemble prediction | Reduces overfitting, handles noisy data well                            |
+| Gradient Boosting Regressor | Kaggle competitions               | Sequential boosting — often top performer (XGBoost, LightGBM, CatBoost) |
 
 ---
 
-### 2️⃣ Classification Algorithms
+### 🏷️ CLASSIFICATION ALGORITHMS → Predict Discrete Labels
 
-→ Predict **discrete categories / labels**
-
-| Algorithm                                                      | Use Case Example                       | Key Features                                                       |
-| -------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------ |
-| **Logistic Regression**                                        | Spam detection, medical diagnosis      | Probabilistic output, linear decision boundary                     |
-| **K-Nearest Neighbors (KNN)**                                  | Image recognition, recommender systems | Simple, instance-based, needs distance metric                      |
-| **Naive Bayes**                                                | Text classification, spam filter       | Fast, works well with text, assumes feature independence           |
-| **Decision Tree Classifier**                                   | Customer churn, loan approval          | Interpretable, handles mixed data types                            |
-| **Random Forest Classifier**                                   | Credit scoring, disease prediction     | Ensemble of trees — robust, handles overfitting                    |
-| **Support Vector Machine (SVM)**                               | Image classification, bioinformatics   | Powerful for high-dim data, uses kernels for non-linear separation |
-| **Gradient Boosting Classifier (XGBoost, LightGBM, CatBoost)** | High-accuracy classification           | Sequential boosting, often wins competitions                       |
-| **Neural Networks (MLP)**                                      | Complex pattern recognition            | Flexible, needs lots of data & tuning                              |
-| **Stochastic Gradient Descent (SGD) Classifier**               | Large-scale linear classification      | Efficient for big datasets                                         |
+| Algorithm                    | Use Case Example                     | Key Features                                                          |
+| ---------------------------- | ------------------------------------ | --------------------------------------------------------------------- |
+| Logistic Regression          | Spam detection, medical diagnosis    | Outputs probabilities, linear decision boundary                       |
+| K-Nearest Neighbors (KNN)    | Image recognition, recommendations   | Instance-based, needs distance metric                                 |
+| Naive Bayes                  | Text classification, spam filter     | Fast, works great with text, assumes independence                     |
+| Decision Tree Classifier     | Customer churn, loan approval        | Interpretable, handles mixed data types                               |
+| Random Forest Classifier     | Credit scoring, disease prediction   | Ensemble of trees — robust and accurate                               |
+| Support Vector Machine (SVM) | Image classification, bioinformatics | Powerful in high dimensions, uses kernels                             |
+| Gradient Boosting Classifier | High-accuracy classification         | Sequential boosting — wins competitions (XGBoost, LightGBM, CatBoost) |
+| Neural Networks (MLP)        | Complex pattern recognition          | Very flexible, needs lots of data & tuning                            |
+| SGD Classifier               | Large-scale linear classification    | Efficient for big datasets, supports online learning                  |
 
 ---
 
@@ -52,73 +50,118 @@ _(Used when you have unlabeled data — only input, no output)_
 
 ---
 
-### 1️⃣ Clustering Algorithms
+### 🧩 CLUSTERING → Group Similar Data Points
 
-→ Group similar data points together
-
-| Algorithm                         | Use Case Example                                | Key Features                                                 |
-| --------------------------------- | ----------------------------------------------- | ------------------------------------------------------------ |
-| **K-Means Clustering**            | Customer segmentation, image compression        | Simple, fast, needs to choose K (number of clusters)         |
-| **Hierarchical Clustering**       | Biology (species grouping), document clustering | Builds tree of clusters (dendrogram), no need to predefine K |
-| **DBSCAN**                        | Anomaly detection, spatial data                 | Finds dense regions, handles noise & outliers well           |
-| **Gaussian Mixture Models (GMM)** | Soft clustering (probabilistic)                 | Assigns probability of belonging to each cluster             |
-| **Mean Shift Clustering**         | Computer vision, tracking objects               | Finds modes (peaks) in data density                          |
-| **Affinity Propagation**          | When you don’t know number of clusters          | Uses message passing, good for small/medium datasets         |
+| Algorithm               | Use Case Example                         | Key Features                                      |
+| ----------------------- | ---------------------------------------- | ------------------------------------------------- |
+| K-Means Clustering      | Customer segmentation, image compression | Simple, fast — must choose K (number of clusters) |
+| Hierarchical Clustering | Biology, document clustering             | Builds dendrogram — no need to predefine K        |
+| DBSCAN                  | Anomaly detection, spatial data          | Finds dense regions, handles noise & outliers     |
+| Gaussian Mixture Models | Soft clustering (probabilistic)          | Assigns probability of belonging to each cluster  |
+| Mean Shift Clustering   | Computer vision, object tracking         | Finds modes (peaks) in data density               |
+| Affinity Propagation    | Unknown number of clusters               | Message passing — good for small/medium datasets  |
 
 ---
 
-### 2️⃣ Dimensionality Reduction Algorithms
+### 📉 DIMENSIONALITY REDUCTION → Reduce Features, Keep Info
 
-→ Reduce number of features while preserving information
-
-| Algorithm                              | Use Case Example                                          | Key Features                                                  |
-| -------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
-| **Principal Component Analysis (PCA)** | Visualization, noise reduction                            | Linear, finds directions of max variance                      |
-| **t-SNE**                              | Visualizing high-dim data (e.g., images, word embeddings) | Non-linear, great for 2D/3D plots — preserves local structure |
-| **UMAP**                               | Faster alternative to t-SNE                               | Preserves both local and global structure, scalable           |
-| **Linear Discriminant Analysis (LDA)** | Classification + dimensionality reduction                 | Supervised — uses class labels to find best projection        |
-| **Autoencoders (Neural)**              | Image compression, anomaly detection                      | Deep learning-based, learns efficient encoding                |
+| Algorithm             | Use Case Example                          | Key Features                                  |
+| --------------------- | ----------------------------------------- | --------------------------------------------- |
+| PCA                   | Visualization, noise reduction            | Linear — finds directions of maximum variance |
+| t-SNE                 | Visualizing embeddings, images            | Non-linear — preserves local structure        |
+| UMAP                  | Faster alternative to t-SNE               | Preserves local + global structure, scalable  |
+| LDA                   | Classification + dimensionality reduction | Supervised — uses class labels for projection |
+| Autoencoders (Neural) | Image compression, anomaly detection      | Deep learning — learns efficient encoding     |
 
 ---
 
-### 3️⃣ Association Rule Learning
+### 🛒 ASSOCIATION RULE LEARNING → Find “People who bought X also bought Y”
 
-→ Find relationships between variables (e.g., “customers who buy X also buy Y”)
-
-| Algorithm             | Use Case Example              | Key Features                                         |
-| --------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Apriori Algorithm** | Market basket analysis        | Finds frequent itemsets, generates association rules |
-| **FP-Growth**         | Faster alternative to Apriori | Uses tree structure, more memory efficient           |
+| Algorithm | Use Case Example         | Key Features                             |
+| --------- | ------------------------ | ---------------------------------------- |
+| Apriori   | Market basket analysis   | Finds frequent itemsets, generates rules |
+| FP-Growth | Faster, scalable Apriori | Uses FP-tree — more memory efficient     |
 
 ---
 
-### 4️⃣ Anomaly Detection (Often Unsupervised)
+### 🚨 ANOMALY DETECTION → Find Rare / Suspicious Data Points
 
-→ Find rare or unusual data points
-
-| Algorithm                      | Use Case Example                          | Key Features                           |
-| ------------------------------ | ----------------------------------------- | -------------------------------------- |
-| **Isolation Forest**           | Fraud detection, system health monitoring | Fast, works well with high-dim data    |
-| **One-Class SVM**              | Detect outliers in manufacturing          | Learns boundary around “normal” data   |
-| **Local Outlier Factor (LOF)** | Detect local anomalies                    | Compares density of point to neighbors |
+| Algorithm            | Use Case Example               | Key Features                                |
+| -------------------- | ------------------------------ | ------------------------------------------- |
+| Isolation Forest     | Fraud detection, monitoring    | Fast, works well with high-dimensional data |
+| One-Class SVM        | Manufacturing defect detection | Learns boundary around “normal” data        |
+| Local Outlier Factor | Local anomaly detection        | Compares density of point to its neighbors  |
 
 ---
 
-## 🧭 Quick Decision Guide
+## 🎮 REINFORCEMENT LEARNING ALGORITHMS
 
-✅ **Want to predict a number?** → Use **Regression** algorithms  
-✅ **Want to predict a category?** → Use **Classification** algorithms  
-✅ **Want to group data?** → Use **Clustering**  
-✅ **Want to reduce features?** → Use **Dimensionality Reduction**  
-✅ **Want to find buying patterns?** → Use **Association Rules**  
-✅ **Want to find weird/fraudulent data?** → Use **Anomaly Detection**
+_(Agent learns by interacting with environment to maximize reward)_
 
 ---
 
-📌 **Pro Tip**:  
-Start simple → Try Linear/Logistic Regression or K-Means first.  
-Then scale up → Use ensemble methods (Random Forest, XGBoost) or deep learning if needed.
+### 🤖 VALUE-BASED METHODS → Learn value of actions/states
+
+| Algorithm            | Use Case Example             | Key Features                                       |
+| -------------------- | ---------------------------- | -------------------------------------------------- |
+| Q-Learning           | Grid worlds, simple games    | Model-free, learns Q-values for state-action pairs |
+| Deep Q-Network (DQN) | Atari games, complex control | Uses deep neural nets to approximate Q-function    |
+| Double DQN           | Improved DQN                 | Reduces overestimation bias in Q-values            |
+| Dueling DQN          | Better value estimation      | Separates state value and advantage estimation     |
 
 ---
 
-🔖 Save this as `ml_algorithms_cheatsheet.md` — perfect for quick revision before interviews, exams, or projects!
+### 🧬 POLICY-BASED METHODS → Learn policy directly
+
+| Algorithm                               | Use Case Example                | Key Features                                           |
+| --------------------------------------- | ------------------------------- | ------------------------------------------------------ |
+| REINFORCE                               | Simple policy gradient          | Monte Carlo method — high variance, simple             |
+| Actor-Critic                            | Robotics, game AI               | Combines value and policy learning — lower variance    |
+| A2C / A3C                               | Parallel training (A3C = async) | Scales well across multiple agents/environments        |
+| PPO (Proximal Policy Optimization)      | Robotics, game AI, SOTA RL      | Stable, efficient — widely used in research & industry |
+| TRPO (Trust Region Policy Optimization) | High-dimensional control        | Guarantees monotonic improvement — complex math        |
+
+---
+
+### 🔄 MODEL-BASED METHODS → Learn environment dynamics
+
+| Algorithm                      | Use Case Example             | Key Features                                            |
+| ------------------------------ | ---------------------------- | ------------------------------------------------------- |
+| Dyna-Q                         | Planning + learning          | Combines Q-learning with model simulation               |
+| Monte Carlo Tree Search (MCTS) | Game AI (e.g., AlphaGo)      | Uses tree search + random sampling — no training needed |
+| Model-Based RL (MBRL)          | Robotics, autonomous systems | Learns transition model — plans ahead efficiently       |
+
+---
+
+### 🧠 HYBRID / ADVANCED METHODS
+
+| Algorithm                                 | Use Case Example             | Key Features                                 |
+| ----------------------------------------- | ---------------------------- | -------------------------------------------- |
+| SAC (Soft Actor-Critic)                   | Robotics, continuous control | Maximizes entropy — sample efficient, stable |
+| TD3 (Twin Delayed DDPG)                   | Continuous action spaces     | Improves DDPG — reduces overestimation       |
+| Rainbow DQN                               | Combines 6 DQN improvements  | SOTA for discrete action Atari games         |
+| DDPG (Deep Deterministic Policy Gradient) | Robotics, continuous control | Actor-critic for continuous actions          |
+
+---
+
+## 🧭 Quick Algorithm Selection Guide
+
+| Problem Type             | Recommended Algorithms                               |
+| ------------------------ | ---------------------------------------------------- |
+| Predicting a number?     | Linear/Polynomial Regression, Random Forest, XGBoost |
+| Predicting a category?   | Logistic Regression, SVM, Random Forest, XGBoost     |
+| Grouping data?           | K-Means, DBSCAN, Hierarchical Clustering             |
+| Too many features?       | PCA, t-SNE, UMAP                                     |
+| Find buying patterns?    | Apriori, FP-Growth                                   |
+| Detect anomalies?        | Isolation Forest, LOF, One-Class SVM                 |
+| Agent learning from env? | Q-Learning, DQN, PPO, SAC, A3C                       |
+
+---
+
+📌 **Pro Tip for Beginners**:  
+Start simple → Linear/Logistic Regression, K-Means, Q-Learning.  
+Then level up → Ensembles (Random Forest, XGBoost), Deep RL (DQN, PPO).
+
+---
+
+🔖 Save this as `ml_algorithms_github.md` — perfect for GitHub repos, documentation, or personal study sheets!
