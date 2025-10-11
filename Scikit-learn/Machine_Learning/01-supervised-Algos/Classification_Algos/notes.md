@@ -36,3 +36,9 @@
     - it shows the proportion of true positive detected out of all the actual posiive instances.
     - High recall is essential when missing postive cases has significant consequenses like in medical tests.
     - Formula: TP / (TP + FN) 
+
+## F1-Score :
+    - F1-score combines precission and recall into a single metric to balance their trade-off.
+    - It provides a better sense of a model's overall performance particularly for imbalanced datasets.
+    - It is helpful when both false positives and false negatives are important though it assumes precision and recall are equally important but in some situations one might matter more than the other.
+    - Formula: (2 * Precision * Recall) / (Precision + Recall)
