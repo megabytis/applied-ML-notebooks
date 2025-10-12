@@ -20,6 +20,8 @@ Lock in the core ML intuition with small, real‑world datasets:
 
 - **Scaling/normalisation basics**
 
+- **Pipelines**
+
 💡 Output: By the end, we can pick up a small CSV from Kaggle and run a full supervised learning pipeline ourselves.
 
 # ⚡ Phase 2 — “Model Variety” (4–6 weeks)
