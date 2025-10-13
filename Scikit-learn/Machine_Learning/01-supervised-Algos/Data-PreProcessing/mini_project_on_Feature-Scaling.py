@@ -50,4 +50,7 @@ plt.title("After Normalization")
 plt.boxplot(df_mm)
 plt.xticks(ticks=range(1, len(df_mm.columns) + 1), labels=df_mm.columns, rotation=45)
 
+# Adjusting layout to prevent overlap
+plt.tight_layout()
+
 plt.show()
