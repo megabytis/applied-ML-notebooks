@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
 
 base_dir = os.path.dirname(__file__)
 file_path = os.path.join(base_dir, "house_price_prediction_data.csv")
@@ -33,3 +34,13 @@ print(f"MSE:{mse} \nRMSE:{rmse} \nR2_Score:{r2s}")
 mean_price = y_test.mean()
 percentage_error = (rmse / mean_price) * 100
 print(f"RMSE as % of mean price: {percentage_error:.2f}%")
+
+# Plotting
+plt.scatter(y_test, y_pred, alpha=0.4)
+plt.plot(
+    [y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color="red", linewidth=2
+)
+plt.xlabel("Actual Prices")
+plt.ylabel("Predicted Prices")
+plt.title("House-Price: Actual vs Predicted")
+plt.show()
