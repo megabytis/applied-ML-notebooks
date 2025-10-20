@@ -39,10 +39,10 @@ Each folder contains `.ipynb` notebooks with code, visualizations, and markdown 
 ## 📈 Progress
 
 ✅ Python Refresher  
-⬜ pandas  
-⬜ numpy  
-⬜ matplotlib  
-⬜ seaborn  
+✅ pandas  
+✅ numpy  
+✅ matplotlib  
+✅ seaborn  
 ⬜ scikit-learn  
 ⬜ EDA Projects  
 ⬜ ML Projects
