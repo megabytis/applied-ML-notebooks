@@ -5,6 +5,7 @@ A plug-and-play guide to plotting in ML — no memorization, no confusion.
 ---
 
 ## 1️⃣ Scatter Plots (Basic Visualization)
+
 **Use For:** Showing distribution or clusters.
 
 ```python
@@ -193,11 +194,11 @@ plt.show()
 
 # Quick Styling Tips
 
-* `cmap="viridis"` → smooth color map
-* `alpha=0.6` → adds transparency
-* `marker='x'` → highlights centroids
-* `plt.grid(True, alpha=0.3)` → clean visuals
-* `plt.tight_layout()` → fixes spacing
+- `cmap="viridis"` → smooth color map
+- `alpha=0.6` → adds transparency
+- `marker='x'` → highlights centroids
+- `plt.grid(True, alpha=0.3)` → clean visuals
+- `plt.tight_layout()` → fixes spacing
 
 ---
 
@@ -218,10 +219,7 @@ plt.show()
 > **Pro Tip:** You don’t “learn plotting.” You collect these 10 templates and reuse them forever.
 > Just plug in your variables, tweak colors, and you’re done.
 
-
-
 ---
 
-That’s our **visualization Swiss Army knife** 🔪  
-If you drop this into your project folder, you’ll never waste another second Googling “matplotlib scatter plot syntax” again.  
-
+That’s our **visualization Swiss Army knife** 🔪
+If you drop this into your project folder, you’ll never waste another second Googling “matplotlib scatter plot syntax” again.
