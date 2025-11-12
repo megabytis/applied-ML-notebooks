@@ -216,10 +216,9 @@ plt.show()
 
 ---
 
-> **Pro Tip:** You don’t “learn plotting.” You collect these 10 templates and reuse them forever.
-> Just plug in your variables, tweak colors, and you’re done.
+> **Pro Tip:** We don’t “learn plotting.” We collect these 10 templates and reuse them forever.
+> Just plug in our variables, tweak colors, and we’re done.
 
 ---
 
 That’s our **visualization Swiss Army knife** 🔪
-If you drop this into your project folder, you’ll never waste another second Googling “matplotlib scatter plot syntax” again.
